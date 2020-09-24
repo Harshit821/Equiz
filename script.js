@@ -4,16 +4,28 @@ var ques = [
         answers: {
             a: 'Delhi',
             b: 'China',
-            c: 'New Delhi'
+            c: 'New Delhi',
+            d: 'None of these'
         },
         correctAnswer: 'a'
+    },
+    {
+        question: "IIIT Hyderabad or IIT Bombay?",
+        answers: {
+            a: 'IIIT Hyderabad',
+            b: 'IIT Bombay',
+            c: 'Both',
+            d: 'somehow depends on student'
+        },
+        correctAnswer: 'd'
     },
     {
         question: "Is india really democratic?",
         answers: {
             a: 'Yes',
             b: 'Absolutely Yes',
-            c: 'Hitler'
+            c: 'Hitler',
+            d: 'None of these'
         },
         correctAnswer: 'b'
     }
@@ -38,7 +50,7 @@ function getready(ques, quizWindow, resultWindow, submitButton)
                     '<label>'
                         + '<input type="radio" name="question'+i+'" value="'+letter+'">'
                         + letter + ': '
-                        + ques[i].answers[letter]
+                        + ques[i].answers[letter] 
                     + '</label>');
             }
             select.push(
